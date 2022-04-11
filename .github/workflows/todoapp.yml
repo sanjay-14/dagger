@@ -39,4 +39,4 @@ jobs:
       - name: "Dagger"
         run: |
           cd pkg/universe.dagger.io/examples/todoapp
-          ${{ github.workspace }}/cmd/dagger/dagger do deploy
+          ${{ github.workspace }}/cmd/dagger/dagger do build
