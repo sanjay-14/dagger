@@ -30,4 +30,5 @@ jobs:
         uses: dagger/dagger-for-github@v2
         with:
           cmds: |
+            cd pkg/universe.dagger.io/examples/todoapp
             do build
