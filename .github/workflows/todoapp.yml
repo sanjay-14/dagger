@@ -26,17 +26,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      # TODO: maybe use Dagger action post 0.2.0-beta.1
-      - name: "Setup Go"
-        uses: actions/setup-go@v1
-        with:
-          go-version: 1.16
-
-      - name: "Install dev Dagger"
-        run: |
-          make dagger
-
       - name: "Dagger"
-        run: |
-          cd pkg/universe.dagger.io/examples/todoapp
-          ${{ github.workspace }}/cmd/dagger/dagger do build
+        uses: dagger/dagger-for-github@v2
+        with:
+          cmds: |
+            do build
