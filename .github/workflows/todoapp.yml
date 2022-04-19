@@ -30,4 +30,4 @@ jobs:
         with:
           workdir: pkg/universe.dagger.io/examples/todoapp
           cmds: |
-            do build
+            do build --log-format=tty
